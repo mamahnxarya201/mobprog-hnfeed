@@ -23,6 +23,7 @@ mixin _$HomeState {
     required TResult Function(HomeContentType contentType, List<int> ids) data,
     required TResult Function(HomeContentType contentType, Failure failure)
         error,
+    required TResult Function(HomeContentType contentType) about,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +31,7 @@ mixin _$HomeState {
     TResult? Function(HomeContentType contentType)? loading,
     TResult? Function(HomeContentType contentType, List<int> ids)? data,
     TResult? Function(HomeContentType contentType, Failure failure)? error,
+    TResult? Function(HomeContentType contentType)? about,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -37,6 +39,7 @@ mixin _$HomeState {
     TResult Function(HomeContentType contentType)? loading,
     TResult Function(HomeContentType contentType, List<int> ids)? data,
     TResult Function(HomeContentType contentType, Failure failure)? error,
+    TResult Function(HomeContentType contentType)? about,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -45,6 +48,7 @@ mixin _$HomeState {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Data value) data,
     required TResult Function(_Error value) error,
+    required TResult Function(_About value) about,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -52,6 +56,7 @@ mixin _$HomeState {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Data value)? data,
     TResult? Function(_Error value)? error,
+    TResult? Function(_About value)? about,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -59,6 +64,7 @@ mixin _$HomeState {
     TResult Function(_Loading value)? loading,
     TResult Function(_Data value)? data,
     TResult Function(_Error value)? error,
+    TResult Function(_About value)? about,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -171,6 +177,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function(HomeContentType contentType, List<int> ids) data,
     required TResult Function(HomeContentType contentType, Failure failure)
         error,
+    required TResult Function(HomeContentType contentType) about,
   }) {
     return loading(contentType);
   }
@@ -181,6 +188,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function(HomeContentType contentType)? loading,
     TResult? Function(HomeContentType contentType, List<int> ids)? data,
     TResult? Function(HomeContentType contentType, Failure failure)? error,
+    TResult? Function(HomeContentType contentType)? about,
   }) {
     return loading?.call(contentType);
   }
@@ -191,6 +199,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function(HomeContentType contentType)? loading,
     TResult Function(HomeContentType contentType, List<int> ids)? data,
     TResult Function(HomeContentType contentType, Failure failure)? error,
+    TResult Function(HomeContentType contentType)? about,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -205,6 +214,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Data value) data,
     required TResult Function(_Error value) error,
+    required TResult Function(_About value) about,
   }) {
     return loading(this);
   }
@@ -215,6 +225,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Data value)? data,
     TResult? Function(_Error value)? error,
+    TResult? Function(_About value)? about,
   }) {
     return loading?.call(this);
   }
@@ -225,6 +236,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function(_Loading value)? loading,
     TResult Function(_Data value)? data,
     TResult Function(_Error value)? error,
+    TResult Function(_About value)? about,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -328,6 +340,7 @@ class _$DataImpl implements _Data {
     required TResult Function(HomeContentType contentType, List<int> ids) data,
     required TResult Function(HomeContentType contentType, Failure failure)
         error,
+    required TResult Function(HomeContentType contentType) about,
   }) {
     return data(contentType, ids);
   }
@@ -338,6 +351,7 @@ class _$DataImpl implements _Data {
     TResult? Function(HomeContentType contentType)? loading,
     TResult? Function(HomeContentType contentType, List<int> ids)? data,
     TResult? Function(HomeContentType contentType, Failure failure)? error,
+    TResult? Function(HomeContentType contentType)? about,
   }) {
     return data?.call(contentType, ids);
   }
@@ -348,6 +362,7 @@ class _$DataImpl implements _Data {
     TResult Function(HomeContentType contentType)? loading,
     TResult Function(HomeContentType contentType, List<int> ids)? data,
     TResult Function(HomeContentType contentType, Failure failure)? error,
+    TResult Function(HomeContentType contentType)? about,
     required TResult orElse(),
   }) {
     if (data != null) {
@@ -362,6 +377,7 @@ class _$DataImpl implements _Data {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Data value) data,
     required TResult Function(_Error value) error,
+    required TResult Function(_About value) about,
   }) {
     return data(this);
   }
@@ -372,6 +388,7 @@ class _$DataImpl implements _Data {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Data value)? data,
     TResult? Function(_Error value)? error,
+    TResult? Function(_About value)? about,
   }) {
     return data?.call(this);
   }
@@ -382,6 +399,7 @@ class _$DataImpl implements _Data {
     TResult Function(_Loading value)? loading,
     TResult Function(_Data value)? data,
     TResult Function(_Error value)? error,
+    TResult Function(_About value)? about,
     required TResult orElse(),
   }) {
     if (data != null) {
@@ -482,6 +500,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function(HomeContentType contentType, List<int> ids) data,
     required TResult Function(HomeContentType contentType, Failure failure)
         error,
+    required TResult Function(HomeContentType contentType) about,
   }) {
     return error(contentType, failure);
   }
@@ -492,6 +511,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function(HomeContentType contentType)? loading,
     TResult? Function(HomeContentType contentType, List<int> ids)? data,
     TResult? Function(HomeContentType contentType, Failure failure)? error,
+    TResult? Function(HomeContentType contentType)? about,
   }) {
     return error?.call(contentType, failure);
   }
@@ -502,6 +522,7 @@ class _$ErrorImpl implements _Error {
     TResult Function(HomeContentType contentType)? loading,
     TResult Function(HomeContentType contentType, List<int> ids)? data,
     TResult Function(HomeContentType contentType, Failure failure)? error,
+    TResult Function(HomeContentType contentType)? about,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -516,6 +537,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Data value) data,
     required TResult Function(_Error value) error,
+    required TResult Function(_About value) about,
   }) {
     return error(this);
   }
@@ -526,6 +548,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Data value)? data,
     TResult? Function(_Error value)? error,
+    TResult? Function(_About value)? about,
   }) {
     return error?.call(this);
   }
@@ -536,6 +559,7 @@ class _$ErrorImpl implements _Error {
     TResult Function(_Loading value)? loading,
     TResult Function(_Data value)? data,
     TResult Function(_Error value)? error,
+    TResult Function(_About value)? about,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -555,5 +579,155 @@ abstract class _Error implements HomeState {
   @override
   @JsonKey(ignore: true)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AboutImplCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
+  factory _$$AboutImplCopyWith(
+          _$AboutImpl value, $Res Function(_$AboutImpl) then) =
+      __$$AboutImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({HomeContentType contentType});
+}
+
+/// @nodoc
+class __$$AboutImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$AboutImpl>
+    implements _$$AboutImplCopyWith<$Res> {
+  __$$AboutImplCopyWithImpl(
+      _$AboutImpl _value, $Res Function(_$AboutImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? contentType = null,
+  }) {
+    return _then(_$AboutImpl(
+      null == contentType
+          ? _value.contentType
+          : contentType // ignore: cast_nullable_to_non_nullable
+              as HomeContentType,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AboutImpl implements _About {
+  const _$AboutImpl(this.contentType);
+
+  @override
+  final HomeContentType contentType;
+
+  @override
+  String toString() {
+    return 'HomeState.about(contentType: $contentType)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AboutImpl &&
+            (identical(other.contentType, contentType) ||
+                other.contentType == contentType));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, contentType);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AboutImplCopyWith<_$AboutImpl> get copyWith =>
+      __$$AboutImplCopyWithImpl<_$AboutImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(HomeContentType contentType) loading,
+    required TResult Function(HomeContentType contentType, List<int> ids) data,
+    required TResult Function(HomeContentType contentType, Failure failure)
+        error,
+    required TResult Function(HomeContentType contentType) about,
+  }) {
+    return about(contentType);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(HomeContentType contentType)? loading,
+    TResult? Function(HomeContentType contentType, List<int> ids)? data,
+    TResult? Function(HomeContentType contentType, Failure failure)? error,
+    TResult? Function(HomeContentType contentType)? about,
+  }) {
+    return about?.call(contentType);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(HomeContentType contentType)? loading,
+    TResult Function(HomeContentType contentType, List<int> ids)? data,
+    TResult Function(HomeContentType contentType, Failure failure)? error,
+    TResult Function(HomeContentType contentType)? about,
+    required TResult orElse(),
+  }) {
+    if (about != null) {
+      return about(contentType);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Data value) data,
+    required TResult Function(_Error value) error,
+    required TResult Function(_About value) about,
+  }) {
+    return about(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Data value)? data,
+    TResult? Function(_Error value)? error,
+    TResult? Function(_About value)? about,
+  }) {
+    return about?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Data value)? data,
+    TResult Function(_Error value)? error,
+    TResult Function(_About value)? about,
+    required TResult orElse(),
+  }) {
+    if (about != null) {
+      return about(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _About implements HomeState {
+  const factory _About(final HomeContentType contentType) = _$AboutImpl;
+
+  @override
+  HomeContentType get contentType;
+  @override
+  @JsonKey(ignore: true)
+  _$$AboutImplCopyWith<_$AboutImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

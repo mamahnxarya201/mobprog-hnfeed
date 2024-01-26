@@ -50,4 +50,9 @@ class HomeNotifier extends StateNotifier<HomeState> {
 
     load();
   }
+
+  void showAbout() {
+    // Logic to change state to 'about'
+    state = HomeState.about(type);
+  }
 }

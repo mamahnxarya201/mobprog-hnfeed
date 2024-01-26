@@ -6,10 +6,7 @@ import 'home_notifier.dart';
 import 'home_state.dart';
 import 'widgets/story_tile.dart';
 
-const homeContentTypes = [
-  HomeContentType.top,
-  HomeContentType.about
-];
+const homeContentTypes = [HomeContentType.top, HomeContentType.about];
 
 class HomePage extends ConsumerStatefulWidget {
   const HomePage({super.key});
@@ -39,6 +36,9 @@ class _HomePageState extends ConsumerState<HomePage> {
         onRefresh: () {
           notifier.refresh();
         },
+        onAbout: () {
+          notifier.showAbout();
+        },
       );
     });
   }
@@ -48,21 +48,26 @@ class _HomeMobileContent extends StatelessWidget {
   const _HomeMobileContent({
     required this.state,
     required this.onRefresh,
-    required this.onNavigate,
     required this.currentIndex,
+    required this.onAbout,
+    required this.onNavigate,
   });
 
   final HomeState state;
   final Function() onRefresh;
+  final Function() onAbout;
   final void Function(int) onNavigate;
+
   final int currentIndex;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(state.contentType.name),
+        title: Text("Hacker News Feed Reader"),
         actions: [
-          IconButton(onPressed: () => context.go('/about'), icon: Icon(Icons.info_outlined)),
+          IconButton(onPressed: onAbout, icon: Icon(Icons.info_outlined)),
+          // IconButton(onPressed: () => context.go('/about'), icon: Icon(Icons.info_outlined)),
           IconButton(
             onPressed: onRefresh,
             icon: const Icon(Icons.refresh),
@@ -76,6 +81,7 @@ class _HomeMobileContent extends StatelessWidget {
           onRefresh: () async => onRefresh(),
         ),
         error: (_, f) => _Error(f.message),
+        about: (_) => const _About(),
       ),
       // bottomNavigationBar: MyNavBar(
       //   currentIndex: currentIndex,
@@ -87,8 +93,10 @@ class _HomeMobileContent extends StatelessWidget {
 
 class _Data extends StatelessWidget {
   const _Data(this.ids, {required this.onRefresh});
+
   final List<int> ids;
   final Future<void> Function() onRefresh;
+
   @override
   Widget build(BuildContext context) {
     return RefreshIndicator(
@@ -113,8 +121,57 @@ class _Loading extends StatelessWidget {
   }
 }
 
+class _About extends StatelessWidget {
+  const _About();
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          // Add your image widget here
+          Image.asset(
+            'assets/image/itats_logo.png', // replace with your image path
+            width: 200, // adjust the width as needed
+            height: 200, // adjust the height as needed
+          ),
+          SizedBox(height: 50), // add some spacing between image and text
+          Text(
+            "Aryana Diaz Cakasana - 13.2022.1.01102",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 16,
+              // add other text styles as needed
+            ),
+          ),
+          SizedBox(height: 16), // add some spacing between image and text
+          Text(
+            "M.Faari Haidar Ali Hisyaam - 13.2022.1.01129",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 16,
+              // add other text styles as needed
+            ),
+          ),
+          SizedBox(height: 16), // add some spacing between image and text
+          Text(
+            "Andhika Dwi Adha P - 13.2022.1.01066",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 16,
+              // add other text styles as needed
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 class _Error extends StatelessWidget {
   const _Error(this.message);
+
   final String message;
 
   @override
